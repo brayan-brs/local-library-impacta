@@ -30,7 +30,7 @@ jobs:
     needs: [job1, job2]
     
     steps:
-      - name: Ultimo passo
+      - name: Passo 3
         run: date
 
 job4:
@@ -39,5 +39,5 @@ job4:
     needs: [job1, job2, job3]
     
     steps:
-      - name: Ultimo passo
+      - name: Passo 4
         run: date
