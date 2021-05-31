@@ -1,4 +1,4 @@
-name: Aula 3
+name: Aula 03
 
 on:
   push:
@@ -7,15 +7,16 @@ on:
     branches: [ main ]
     
 env:
-  WORKFLOW_VAR: 'variavel de ambiente'
-  
+  WORKFLOW_VAR: 'minha variavel'
+
 jobs:
   build:
-   runs-on: ubuntu-latest
-   steps:
+    runs-on: ubuntu-latest   
+    steps:
     
-      - name: Checkout
-        run: action/checkout@v2.3.4
-        
-      - name: Upload
-        run: action/upload-artifact@v2.2.3
+    - name: Checkout
+      uses: actions/checkout@v2.3.4
+       
+    - name: ${{ env. WORKFLOW_VAR }}
+      uses: actions/upload-artifact@v2.2.3
+    
