@@ -19,7 +19,7 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
-        name: ${{  WORKFLOW_VAR }}
+        name: ${{ env.WORKFLOW_VAR }}
         path: .
         if-no-files-found: error
         retention-days: 3
